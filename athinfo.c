@@ -13,7 +13,7 @@
  * without express or implied warranty.
  */
 
-static const char rcsid[] = "$Id: athinfo.c,v 1.1 1998-11-05 02:01:39 ghudson Exp $";
+static const char rcsid[] = "$Id: athinfo.c,v 1.2 1999-09-15 23:56:19 danw Exp $";
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -22,6 +22,7 @@ static const char rcsid[] = "$Id: athinfo.c,v 1.1 1998-11-05 02:01:39 ghudson Ex
 #include <unistd.h>
 #include <errno.h>
 #include <netdb.h>
+#include <string.h>
 
 #define ATHINFO_FALLBACK_PORT 49155
 

@@ -1,0 +1,42 @@
+# $Id: Makefile.in,v 1.1 1998-11-05 02:01:38 ghudson Exp $
+
+SHELL=/bin/sh
+VPATH=@srcdir@
+INSTALL=@INSTALL@
+INSTALL_PROGRAM=@INSTALL_PROGRAM@
+srcdir=@srcdir@
+top_srcdir=@top_srcdir@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+bindir=@bindir@
+mandir=@mandir@
+
+CC=@CC@
+DEFS=@DEFS@
+CPPFLAGS=@CPPFLAGS@
+CFLAGS=@CFLAGS@
+LDFLAGS=@LDFLAGS@
+LIBS=@LIBS@
+ALL_CFLAGS=${CPPFLAGS} ${CFLAGS} ${DEFS}
+
+all: athinfo
+
+athinfo: athinfo.o
+	${CC} ${LDFLAGS} -o athinfo athinfo.o ${LIBS}
+
+.c.o:
+	${CC} -c ${ALL_CFLAGS} $<
+
+check:
+
+install:
+	${top_srcdir}/mkinstalldirs ${DESTDIR}${lsbindir}
+	${top_srcdir}/mkinstalldirs ${DESTDIR}${mandir}/man1
+	${INSTALL_PROGRAM} athinfo ${DESTDIR}${lsbindir}
+	${INSTALL} -m 444 ${srcdir}/athinfo.1 ${DESTDIR}${mandir}/man1
+
+clean:
+	rm -f athinfo.o athinfo
+
+distclean: clean
+	rm -f config.cache config.log config.status Makefile

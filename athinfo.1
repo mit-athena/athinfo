@@ -1,4 +1,4 @@
-.\" $Id: athinfo.1,v 1.1 1998-11-05 02:01:39 ghudson Exp $
+.\" $Id: athinfo.1,v 1.2 1998-11-16 16:53:41 ghudson Exp $
 .\"
 .\" Copyright 1998 by the Massachusetts Institute of Technology.
 .\"
@@ -76,6 +76,18 @@ A list of the workstation's TCP server sockets
 .TP 12
 .B login
 0 if logins on the workstation are enabled; 1 if not
+.TP 12
+.B hinv
+On IRIX workstations only, displays the workstation's verbose hardware
+profile
+.TP 12
+.B instmach
+On IRIX workstations only, displays the machine variable settings used
+by inst.
+.TP 12
+.B chkconfig
+On IRIX workstations only, displays the configuration settings set in
+.BR /etc/config .
 .RE
 .SH "SEE ALSO"
 .BR athinfod (8)

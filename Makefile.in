@@ -1,4 +1,4 @@
-# $Id: Makefile.in,v 1.1 1998-11-05 02:01:38 ghudson Exp $
+# $Id: Makefile.in,v 1.2 1999-04-08 19:09:37 ghudson Exp $
 
 SHELL=/bin/sh
 VPATH=@srcdir@
@@ -30,9 +30,9 @@ athinfo: athinfo.o
 check:
 
 install:
-	${top_srcdir}/mkinstalldirs ${DESTDIR}${lsbindir}
+	${top_srcdir}/mkinstalldirs ${DESTDIR}${bindir}
 	${top_srcdir}/mkinstalldirs ${DESTDIR}${mandir}/man1
-	${INSTALL_PROGRAM} athinfo ${DESTDIR}${lsbindir}
+	${INSTALL_PROGRAM} athinfo ${DESTDIR}${bindir}
 	${INSTALL} -m 444 ${srcdir}/athinfo.1 ${DESTDIR}${mandir}/man1
 
 clean:

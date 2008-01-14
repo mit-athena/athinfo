@@ -1,0 +1,23 @@
+debathena-athinfo (9.4.27-0debathena4) unstable; urgency=low
+
+  * Section: debathena/net.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Tue, 17 Jul 2007 06:33:32 -0400
+
+debathena-athinfo (9.4.27-0debathena3) unstable; urgency=low
+
+  * Depends: netbase.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Tue, 26 Jun 2007 16:32:39 -0400
+
+debathena-athinfo (9.4.27-0debathena2) unstable; urgency=low
+
+  * Add athinfo to /etc/services.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Tue, 26 Jun 2007 16:32:38 -0400
+
+debathena-athinfo (9.4.27-0debathena1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Anders Kaseorg <andersk@mit.edu>  Tue, 30 Jan 2007 00:33:21 -0500

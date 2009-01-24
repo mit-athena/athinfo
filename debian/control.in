@@ -1,7 +1,7 @@
 Source: debathena-athinfo
 Section: debathena/net
 Priority: extra
-Maintainer: Debian-Athena Project <debathena@mit.edu>
+Maintainer: Debathena Project <debathena@mit.edu>
 Build-Depends: @cdbs@
 Standards-Version: 3.7.2
 

@@ -1,6 +1,6 @@
-debathena-athinfo (10.0.1-0debathena0) unstable; urgency=low
+debathena-athinfo (10.0.1-0debathena1) unstable; urgency=low
 
-  * Update manpage to document Debathena's queries.
+  * Update manpage to document Debathena's queries (Trac: #180).
 
  -- Geoffrey Thomas <geofft@mit.edu>  Sat, 11 Apr 2009 19:24:46 -0400
 

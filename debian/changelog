@@ -1,3 +1,9 @@
+debathena-athinfo (10.0.1-0debathena0) unstable; urgency=low
+
+  * Update manpage to document Debathena's queries.
+
+ -- Geoffrey Thomas <geofft@mit.edu>  Sat, 11 Apr 2009 19:24:46 -0400
+
 debathena-athinfo (10.0.0-0debathena1) unstable; urgency=low
 
   * Change DEB_AUTO_UPDATE_AUTOCONF to 2.50, not 1.

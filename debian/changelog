@@ -1,3 +1,9 @@
+debathena-athinfo (10.0.1-0debathena2) unstable; urgency=low
+
+  * Update manpage to document new Debathena queries.
+
+ -- Geoffrey Thomas <geofft@mit.edu>  Thu, 21 Jan 2010 04:22:01 -0500
+
 debathena-athinfo (10.0.1-0debathena1) unstable; urgency=low
 
   * Update manpage to document Debathena's queries (Trac: #180).

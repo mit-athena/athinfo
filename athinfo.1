@@ -89,7 +89,16 @@ workstation is set PUBLIC=true or is debathena-cluster)
 .TP 17
 .B update-status
 On Debian/Ubuntu systems only, result of a simulated apt upgrade,
-including whether any packages were going to be upgraded
+including whether any packages were going to be upgraded. Note that
+this does not run aptitude update first!
+.TP 17
+.B policy
+On Debian/Ubuntu systems only, the apt repository policy, including
+all configured apt repositories/components and their priorities
+.TP 17
+.B hardware
+On Linux, the hardware's self-reported product name and version, from
+the DMI/SMBIOS interface
 .TP 17
 .B update.desync
 The contents of the workstation's update.desync file, if any

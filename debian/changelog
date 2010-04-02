@@ -4,8 +4,9 @@ debathena-athinfo (10.0.3-0debathena1) unstable; urgency=low
   * Add a -t option to specify a connection timeout.
   * Bump the debhelper compatibility level (no changes needed).
   * Bump the standards version (no changes needed).
+  * Enable tab-completion for athrun. (Trac: #364)
 
- -- Evan Broder <broder@mit.edu>  Fri, 02 Apr 2010 16:08:58 -0400
+ -- Evan Broder <broder@mit.edu>  Fri, 02 Apr 2010 17:55:03 -0400
 
 debathena-athinfo (10.0.2-0debathena1) unstable; urgency=low
 

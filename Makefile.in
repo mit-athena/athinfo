@@ -10,6 +10,7 @@ prefix=@prefix@
 exec_prefix=@exec_prefix@
 bindir=@bindir@
 mandir=@mandir@
+sysconfdir=@sysconfdir@
 
 CC=@CC@
 DEFS=@DEFS@
@@ -26,8 +27,10 @@ check:
 install:
 	${top_srcdir}/mkinstalldirs ${DESTDIR}${bindir}
 	${top_srcdir}/mkinstalldirs ${DESTDIR}${mandir}/man1
+	${top_srcdir}/mkinstalldirs ${DESTDIR}${sysconfdir}/bash_completion.d
 	${INSTALL_PROGRAM} athinfo ${DESTDIR}${bindir}
 	${INSTALL} -m 444 ${srcdir}/athinfo.1 ${DESTDIR}${mandir}/man1
+	${INSTALL} -m 644 ${srcdir}/bash_completion ${DESTDIR}${sysconfdir}/bash_completion.d/athinfo
 
 clean:
 

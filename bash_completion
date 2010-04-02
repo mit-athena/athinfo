@@ -1,0 +1,12 @@
+_athinfo () {
+    COMPREPLY=()
+    local cur="${COMP_WORDS[$COMP_CWORD]}"
+
+    if [ $COMP_CWORD -eq 1 ]; then
+	_known_hosts -a
+    elif [ $COMP_CWORD -eq 2 ]; then
+        local IFS=$'\n'
+        COMPREPLY=( $(compgen -W "$(athinfo -t 1 "${COMP_WORDS[1]}" queries 2>/dev/null | awk '!/^#/ && !/^$/ { print $1 }')" -- "$cur") )
+    fi
+}
+complete -F _athinfo athinfo

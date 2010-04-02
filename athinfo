@@ -26,8 +26,6 @@ def main():
     host = args[0]
     query = args[1]
 
-    socket.setdefaulttimeout(options.timeout)
-
     try:
         port = socket.getservbyname('athinfo', 'tcp')
     except socket.error:
@@ -41,7 +39,11 @@ def main():
 
     try:
         s = socket.socket()
+
+        s.settimeout(options.timeout)
         s.connect((host_addr, port))
+        s.settimeout(None)
+
         s.sendall('%s\n' % query)
         sys.stdout.write(s.makefile().read())
     except socket.error, e:

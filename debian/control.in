@@ -3,12 +3,12 @@ Section: debathena/net
 Priority: extra
 Maintainer: Debathena Project <debathena@mit.edu>
 Build-Depends: @cdbs@
-Standards-Version: 3.7.2
+Standards-Version: 3.8.4
 
 Package: debathena-athinfo
-Architecture: any
+Architecture: all
 Provides: athinfo
-Depends: ${shlibs:Depends}, ${misc:Depends}, netbase
+Depends: ${shlibs:Depends}, ${misc:Depends}, python, netbase
 Description: An Athena utility to retrieve information about a workstation
  The athinfo tool queries a remote workstation using the athinfo daemon 
  for information about the workstation, such as its hardware type and 

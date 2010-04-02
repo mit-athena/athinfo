@@ -2,10 +2,15 @@
 
 import optparse
 import os
+import signal
 import socket
 import sys
 
 ATHINFO_FALLBACK_PORT = 49155
+
+def alarm(signum, frame):
+    print >>sys.stderr, 'athinfo: timed out'
+    sys.exit(1)
 
 def main():
     parser = optparse.OptionParser(
@@ -13,7 +18,7 @@ def main():
         )
     parser.add_option(
         '-t', '--timeout',
-        type='float',
+        type='int',
         dest='timeout',
         help='timeout after SECONDS',
         metavar='SECONDS',
@@ -40,10 +45,11 @@ def main():
     try:
         s = socket.socket()
 
-        s.settimeout(options.timeout)
-        s.connect((host_addr, port))
-        s.settimeout(None)
+        if options.timeout:
+            signal.signal(signal.SIGALRM, alarm)
+            signal.alarm(options.timeout)
 
+        s.connect((host_addr, port))
         s.sendall('%s\n' % query)
         sys.stdout.write(s.makefile().read())
     except socket.error, e:

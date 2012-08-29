@@ -51,8 +51,11 @@ def main():
 
         s.connect((host_addr, port))
         s.sendall('%s\n' % query)
-        sys.stdout.write(s.makefile().read())
+        sys.stdout.writelines(s.makefile())
     except socket.error, e:
+        print >>sys.stderr, 'athinfo: %s' % e.args[-1]
+        return 1
+    except IOError, e:
         print >>sys.stderr, 'athinfo: %s' % e.args[-1]
         return 1
     except KeyboardInterrupt:

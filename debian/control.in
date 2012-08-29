@@ -3,7 +3,7 @@ Section: debathena/net
 Priority: extra
 Maintainer: Debathena Project <debathena@mit.edu>
 Build-Depends: @cdbs@
-Standards-Version: 3.8.4
+Standards-Version: 3.9.1
 
 Package: debathena-athinfo
 Architecture: all

@@ -2,8 +2,8 @@ Source: debathena-athinfo
 Section: debathena/net
 Priority: extra
 Maintainer: Debathena Project <debathena@mit.edu>
-Build-Depends: @cdbs@
-Standards-Version: 3.9.1
+Build-Depends: cdbs, debhelper, dh-buildinfo, autoconf
+Standards-Version: 3.9.3
 
 Package: debathena-athinfo
 Architecture: all

@@ -1,0 +1,4 @@
+include *.1
+include bash_completion
+include MANIFEST.in
+

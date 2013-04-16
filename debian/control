@@ -2,7 +2,9 @@ Source: debathena-athinfo
 Section: debathena/net
 Priority: extra
 Maintainer: Debathena Project <debathena@mit.edu>
-Build-Depends: cdbs, debhelper, dh-buildinfo, autoconf
+# FIXME: python-support should be replaced with dh_python2 once lucid
+# is no longer supported.
+Build-Depends: debhelper (>= 7), dh-buildinfo, bash-completion, python-support
 Standards-Version: 3.9.3
 
 Package: debathena-athinfo

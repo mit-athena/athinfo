@@ -1,8 +1,13 @@
 debathena-athinfo (10.1-0debathena2) UNRELEASED; urgency=low
 
+  [ Jonathan Reed ]
   * Switch from control.in to control (Trac: #561)
   * Bump Standards-Version to 3.9.3
   * Bump compat level to 7
+
+  [ Victor Vasiliev ]
+  * Use Python distutils instead of autoconf
+  * Use debhelper7
 
  -- Jonathan Reed <jdreed@mit.edu>  Wed, 03 Apr 2013 13:59:27 -0400
 

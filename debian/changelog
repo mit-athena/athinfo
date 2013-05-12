@@ -9,7 +9,10 @@ debathena-athinfo (10.1-0debathena2) UNRELEASED; urgency=low
   * Use Python distutils instead of autoconf
   * Use debhelper7
 
- -- Jonathan Reed <jdreed@mit.edu>  Wed, 03 Apr 2013 13:59:27 -0400
+  [ Alexander Chernyakhovsky ]
+  * Remove dh-buildinfo
+
+ -- Jonathan Reed <jdreed@mit.edu>  Sun, 12 May 2013 19:28:38 -0400
 
 debathena-athinfo (10.1-0debathena1) unstable; urgency=low
 

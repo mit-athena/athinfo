@@ -1,4 +1,4 @@
-debathena-athinfo (10.1-0debathena2) UNRELEASED; urgency=low
+debathena-athinfo (10.1-0debathena2) unstable; urgency=low
 
   [ Jonathan Reed ]
   * Switch from control.in to control (Trac: #561)

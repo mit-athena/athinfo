@@ -5,7 +5,7 @@ Maintainer: Debathena Project <debathena@mit.edu>
 # FIXME: python-support should be replaced with dh_python2 once lucid
 # is no longer supported.
 Build-Depends: debhelper (>= 7), bash-completion, python-support
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 
 Package: debathena-athinfo
 Architecture: all

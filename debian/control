@@ -6,6 +6,8 @@ Maintainer: Debathena Project <debathena@mit.edu>
 # is no longer supported.
 Build-Depends: debhelper (>= 7), bash-completion, python-support
 Standards-Version: 3.9.5
+Vcs-Browser: https://github.com/mit-athena/athinfo
+Vcs-Git: git://github.com/mit-athena/athinfo -b debian
 
 Package: debathena-athinfo
 Architecture: all

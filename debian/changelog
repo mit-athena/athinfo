@@ -1,3 +1,9 @@
+debathena-athinfo (10.3-0debathena3) unstable; urgency=medium
+
+  * Replace dh-python with a correct versioned dependency on python
+
+ -- Alexander Chernyakhovsky <achernya@mit.edu>  Fri, 17 Jun 2016 22:58:23 -0400
+
 debathena-athinfo (10.3-0debathena2) unstable; urgency=medium
 
   * Replace python-support with dh-python

@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from __future__ import print_function
 import optparse
 import os
 import signal
@@ -9,7 +10,7 @@ import sys
 ATHINFO_FALLBACK_PORT = 49155
 
 def alarm(signum, frame):
-    print >>sys.stderr, 'athinfo: timed out'
+    print('athinfo: timed out', file=sys.stderr)
     sys.exit(1)
 
 def main():
@@ -39,7 +40,7 @@ def main():
     try:
         host_addr = socket.gethostbyname(host)
     except socket.error:
-        print >>sys.stderr, 'athinfo: host %s not found' % host
+        print('athinfo: host %s not found' % host, file=sys.stderr)
         return 1
 
     try:
@@ -50,13 +51,13 @@ def main():
             signal.alarm(options.timeout)
 
         s.connect((host_addr, port))
-        s.sendall('%s\n' % query)
+        s.sendall(('%s\n' % query).encode())
         sys.stdout.writelines(s.makefile())
-    except socket.error, e:
-        print >>sys.stderr, 'athinfo: %s' % e.args[-1]
+    except socket.error as e:
+        print('athinfo: %s' % e.args[-1], file=sys.stderr)
         return 1
-    except IOError, e:
-        print >>sys.stderr, 'athinfo: %s' % e.args[-1]
+    except IOError as e:
+        print('athinfo: %s' % e.args[-1], file=sys.stderr)
         return 1
     except KeyboardInterrupt:
         return 1
